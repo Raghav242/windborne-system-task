@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WindBorne Application - Raghavendra Kulkarni</title>
+</head>
+
+<body>
+
+    <h1>Software Engineer, Machine Learning Systems</h1>
+    <h2>Raghavendra Kulkarni</h2>
+
+    <hr>
+
+    <h3>1. Tell us about a problem you couldn’t leave alone. What did you build to fix it?</h3>
+
+    <p>
+        At Northeastern, I noticed that Teaching assistants were spending a lot of time grading student's essays in a finance class. 
+        I wanted to see if AI could help reduce that time while still providing useful feedback to students. So I built a web application that could grade essays using LLMs and provide feedback to students.
+        This reduced the grading time from 8+ hours to under 30 minutes. 
+    </p>
+
+    <p>
+        The harder part was making the output useful and consistent. I tested different
+        retrieval strategies and prompts against faculty feedback and kept improving the
+        system based on where it failed.
+    </p>
+
+
+    <h3>2. Tell us about a time you had to understand an unfamiliar system that wasn’t behaving as expected. How did you get to the bottom of it?</h3>
+
+    <p>
+        During my internship at Vicor, I worked on an internal PCB engineering application
+        where opening one workflow took around 80 seconds. I hadn't worked on that part
+        of the system before, so I started tracing what happened from the UI to the backend
+        and database.
+    </p>
+
+    <p>
+        I added timing around different parts of the request and found that most of the
+        delay came from loading attachment data for roughly 1,500 records. The application
+        was fetching everything upfront even though users rarely needed all the attachments.
+    </p>
+
+    <p>
+        I changed the workflow to load attachments only when requested and added caching
+        for repeated database calls. That brought the initial load time from around
+        80 seconds to about 2 seconds. It also taught me to measure first instead of
+        assuming I knew where the bottleneck was.
+    </p>
+
+
+    <h3>3. Describe a real coding task where AI tools helped you move faster. Where did you have to step in and think for yourself?</h3>
+
+    <p>
+        I use tools like ChatGPT and Claude Code regularly, especially for repetitive
+        coding tasks.
+    </p>
+
+    <p>
+        While building backend services for one of the apps that I was working on called presbot (voice coaching platform), I used AI to
+        generate starting points for SQLAlchemy models, API schemas, tests, and some
+        Celery boilerplate. It saved time on code where I already understood what the
+        final structure should look like.
+    </p>
+
+    <p>
+        I still had to design how Whisper transcription, LLM grading, and text-to-speech
+        jobs moved through Celery, RabbitMQ, and Redis, how failures were handled, and
+        how progress was reported to users. AI helped me write code faster, but I still
+        had to decide whether that code actually made sense for the system.
+    </p>
+
+
+    <h3>4. Describe the extent to which you have experience with production systems.</h3>
+
+    <p>
+        Most of my professional experience has involved systems used by real users.
+        At Vicor, I worked on Java/Spring Boot services and engineering applications
+        integrating with SAP, PLM, and Oracle. My work included APIs, caching, database
+        queries, error handling, logging, testing, and debugging production issues.
+    </p>
+
+    <p>
+        At Cognizant, I worked on backend services, React applications, cloud automation,
+        and deployments using AWS, Docker, Kubernetes, Jenkins, Grafana.
+    </p>
+
+    <p>
+        At Northeastern, I work on AI systems used by faculty and students, including
+        distributed workloads using Celery, RabbitMQ, Redis, Whisper, LLMs, and
+        on-premise NVIDIA GPUs.
+    </p>
+
+
+    <h3>5. How many years of relevant experience do you have?</h3>
+
+    <p>
+        About 3 years across Vicor, Cognizant, and Northeastern University(DASH AI Hub).
+    </p>
+
+</body>
+</html>
